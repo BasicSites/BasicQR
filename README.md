@@ -4,7 +4,7 @@ Ein einfacher QR-Code Generator, der es ermöglicht, QR-Codes basierend auf Benu
 
 ## Demo
 
-![QR-Code Generator Demo](https://basicsites.github.io/BasicQR/)
+[QR-Code Generator Demo](https://basicsites.github.io/BasicQR/)
 
 ## Features
 
