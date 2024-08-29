@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 320px;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 280px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #333;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    background-color: #444;
+}
+
+button {
+    width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #ffffff;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled),
+button.blink {
+    background-color: #6200ea;
+    transform: scale(1.05);
+}
+
+#qrcode {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-20px);
+    text-align: center;
+}
+
+#qrcode img {
+    display: block;
+    margin: 0 auto; /* Bild zentrieren */
+}
+
+#download-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #6200ea;
+    border-radius: 50%;
+    margin: 20px auto 0;
+    display: none; /* Versteckt, bis es benötigt wird */
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+#download-btn {
+    width: 100%;
+    display: none;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes expandToButton {
+    from {
+        width: 50px;
+        border-radius: 50%;
+    }
+    to {
+        width: 280px;
+        border-radius: 5px;
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        background-color: #6200ea;
+        transform: scale(1);
+    }
+    50% {
+        background-color: #444;
+        transform: scale(1.05);
+    }
+}
