@@ -13,9 +13,6 @@ Ein einfacher QR-Code Generator, der es ermöglicht, QR-Codes basierend auf Benu
 - Animationen für eine moderne Benutzeroberfläche
 - Möglichkeit, den QR-Code herunterzuladen
 
-## Technologien
+## Bibliothek
 
-- HTML
-- CSS
-- JavaScript
 - [QRCode.js](https://github.com/davidshimjs/qrcodejs) Bibliothek für die QR-Code Generierung
